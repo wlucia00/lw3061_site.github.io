@@ -6,6 +6,6 @@ output:
     toc_float: true
 ---
 
-## Welcome to my personal website!
+## Introduction
 
 I am a 2nd year MPH student at Columbia University in the Epidemiology department with a certificate in Infectious Disease Epidemiology. 

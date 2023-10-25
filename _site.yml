@@ -13,4 +13,4 @@ navbar:
       href: http://linkedin.com/in/lwang00
 output:
   html_document:
-    theme: journal
+    theme: cerulean

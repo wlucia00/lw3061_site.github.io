@@ -4,11 +4,13 @@ output: html_document
 ---
 
 ## About
-*write here*
+so much to say!
 
 ## Academic Experience
-college
-Graduate school
+* college
+
+* Graduate school
 
 ## Professional Experience
-some jobs ive had in the past
+* some jobs ive had in the past
+* yay!
