@@ -1,0 +1,14 @@
+---
+title: "About"
+output: html_document
+---
+
+## About
+*write here*
+
+## Academic Experience
+college
+Graduate school
+
+## Professional Experience
+some jobs ive had in the past

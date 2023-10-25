@@ -8,7 +8,7 @@ navbar:
     - icon: fa-envelope fa-lg
       href: mailto:<w.lucia@columbia.edu>
     - icon: fa-github fa-lg
-      href: http://github.com/lw3061/
+      href: http://github.com/wlucia00/
     - icon: fa-brands fa-linkedin
       href: http://linkedin.com/in/lwang00
 output:
