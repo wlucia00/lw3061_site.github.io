@@ -8,15 +8,37 @@ output:
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
 ```
 
-Column {data-width=650}
+[Click here](index.html) to go back!
+
+```{r plots, include=FALSE}
+data("ny_noaa")
+
+noaa = ny_noaa |> 
+  janitor::clean_names() |>
+  drop_na() |>
+  separate(col=date, into=c("year", "month", "day"), sep="-")
+
+noaa_21cent = noaa |>
+  mutate(
+    year_n = as.numeric(year),
+    tmax = as.numeric(tmax),
+    tmin = as.numeric(tmin)
+  ) |>
+  filter(year_n >= 1990, id== "USW00094728")
+```
+
+Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart A
+### Chart A: average snowfall at the NYC weather station between 2000-2020
 
 ```{r}
-
+  # snow depth vs tmin 
 ```
 
 Column {data-width=350}
@@ -25,12 +47,12 @@ Column {data-width=350}
 ### Chart B
 
 ```{r}
-
+  # year vs temprange
 ```
 
 ### Chart C
 
 ```{r}
-
+ # group by month, color by year, amts of prcp
 ```
 
