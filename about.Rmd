@@ -1,14 +1,27 @@
 ---
 title: "About"
 ---
-
-
+In lieu of a full resume, this is a summary of my academic and professional background.
 
 ## Academic Experience
-* college
-
-* Graduate school
+* Columbia University Mailman School of Public Health, May 2024
+  + MPH in Epidemiology, certificate in Infectious Disease Epidemiology
+  + Activities: Citizen's Public Health Literacy Organization (Climate Club), Well-Being Collective (Teaching and Learning Group)
+  + Relevant coursework: Principles and Applications of Epidemiology (I-III), Infectious Diseases, Emerging Infectious Disease, Data Science, Environmental Epidemiology, Spatial Epidemiology
+  
+* University of North Carolina at Chapel Hill, May 2022
+  + BSPH in Biostatistics
+  + BA in Linguistics, minor in Mathematics
 
 ## Professional Experience
-* some jobs ive had in the past
-* yay!
+* *Summer Fellow*, National Cancer Institute, June - August 2023
+  + Wrote and edited SAS programs to impute population estimates and calculate updated incidence rates of endometrial cancers using national cancer registry data between 2000-2020
+  + Adjusted population estimates and rates to correct for prevalence of hysterectomy and bias from sampling error
+
+* *Health Content Assistant*, Columbia University, March 2023 - present
+  + Performed literature reviews for various health topics such as sexual and reproductive health, depression and anxiety disorders, sleep hygiene, nutrition, and social dynamics. 
+  + Compiled research to respond to layperson questions about health topics with a trauma-informed, respectful, and non-academic lens. 
+  
+* *Research Assistant*, University of North Carolina, August 2021 - May 2022
+  + Automated script for pilot study comparing pronoun usage in context to participant's computer mouse movements
+  + Inputted survey logic in Qualtrics for study analyzing the effects of narrative priming on reading comprehension
