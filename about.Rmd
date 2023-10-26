@@ -1,10 +1,8 @@
 ---
 title: "About"
-output: html_document
 ---
 
-## About
-so much to say!
+
 
 ## Academic Experience
 * college
