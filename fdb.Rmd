@@ -14,6 +14,7 @@ library(plotly)
 ```
 
 [Click here](index.html) to go back!
+This page shows information about the Central Park weather station in NYC.
 
 ```{r plots, include=FALSE}
 data("ny_noaa")
@@ -23,36 +24,67 @@ noaa = ny_noaa |>
   drop_na() |>
   separate(col=date, into=c("year", "month", "day"), sep="-")
 
-noaa_21cent = noaa |>
+noaa_nyc = noaa |>
   mutate(
     year_n = as.numeric(year),
     tmax = as.numeric(tmax),
-    tmin = as.numeric(tmin)
+    tmax = tmax / 10,
+    tmin = as.numeric(tmin),
+    tmin = tmin / 10,
+    tmax_F = (tmax*1.8)+32,
+    tmin_F = (tmin*1.8)+32
   ) |>
-  filter(year_n >= 1990, id== "USW00094728")
+  filter(id== "USW00094728")
 ```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart A: average snowfall at the NYC weather station between 2000-2020
+### Chart A: Maximum snowfall levels by year, categorized by minimum temperature levels
 
 ```{r}
   # snow depth vs tmin 
+noaa_nyc |>
+  group_by(year) |> 
+  summarize(maxsnow = max(snow), min_tmin=min(tmin)) |>
+  mutate(
+    textlab = str_c("Minimum temperature (C): ", min_tmin)
+  ) |>
+  plot_ly(
+    x=~year, y=~maxsnow, type="scatter", alpha=0.5, mode="markers", color=~min_tmin, text=~textlab
+  )
+
 ```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Chart B: Temperature ranges (highest tmax - lowest tmin) between 1990-2010
 
 ```{r}
-  # year vs temprange
+noaa_nyc |>
+  filter(year_n >= 1990) |>
+  group_by(year) |>
+  summarize(lowest=min(tmin), highest = max(tmax)) |>
+  mutate(temprange = highest-lowest) |>
+plot_ly(
+  x =~year, y=~temprange, type="scatter", mode="line"
+) 
 ```
 
-### Chart C
+### Chart C: Total precipitation (mm) by month in 2000 vs 2010
 
 ```{r}
- # group by month, color by year, amts of prcp
+noaa_nyc |>
+  filter(year_n == 2000 | year_n == 2010) |>
+  mutate(
+    prcp = (prcp/10)
+  ) |>
+  group_by(year, month) |>
+  summarize(prcp = sum(prcp)) |>
+  plot_ly(
+    x=~month, y=~prcp, type="bar", color=~year
+  )
+
 ```
 

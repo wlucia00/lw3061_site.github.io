@@ -1,0 +1,7 @@
+---
+title: "Remy!"
+output: html_document
+---
+
+This is my roommate's cat! Rstudio more like R-emy
+![Remy](IMG_1334.jpg)
